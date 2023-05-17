@@ -8,51 +8,16 @@
   /* Estilos generales */
 
   .container {
-    max-width: 960px;
-    margin: 0 auto;
+    max-width:400px;
+    margin: 10px 10px;
     padding: 20px;
     background-color: #ffffff93;
     border-radius: 14px;
     animation: fade-in 3s ease-out;
+    height: 130px;
   }
 
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
-  
-  .container-1 {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff93;
-    border-radius: 14px;
-    animation: fade-in 3s ease-out;
-  }
-
-  .container-2 {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff93;
-    border-radius: 14px;
-; animation: fade-in 1s ease-out;
-  }
-
-  .container-3 {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff93;
-    border-radius: 14px;
-    animation: fade-in 1s ease-out;
-  }
-  
   /* Estilos del encabezado */
   header {
     background-color: #333;
@@ -126,3 +91,67 @@ body{
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
+
+.cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 30px auto;
+    width: 700px;
+    height: 300px;
+    border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .card .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: -80px;
+    height: 40px;
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+  
+  .title-white {
+    color: white;
+  }
+  
+  .title-black {
+    color: black;
+  }
+  
+  @media all and (max-width: 500px) {
+    .card-list {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
+  
+  
